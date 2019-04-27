@@ -1,9 +1,0 @@
-sudo: required
-services:
-  - docker
-
-before install:
-  - docker build -t arkar/subsdevices:v1 -f Dockerfile.dev .
-
-script: 
-  - docker run arkar/subsdevices:v1 npm run test -- --coverage
